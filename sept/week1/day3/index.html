@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--description list-->
+    <dl>
+        <!--description term-->
+        <dt>Cow</dt> 
+        <!--description details-->
+        <dd>Cow color is white</dd>
+        <dt>Dog</dt>
+        <dd>Dog color is brown</dd>
+    </dl>
+
+    <!--table in html-->
+    <table border="1">
+        <thead>
+        <tr>
+            <th colspan="2">Heading 1</th>
+            <th>Heading 2</th>
+            <th>Heading 3</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td rowspan="2">item 1</td>
+            <td>item 2</td>
+            <td>item 3</td>
+        </tr>
+        <tr>
+            <td>item 4</td>
+            <td>item 5</td>
+            <td>item 6</td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td>item 7</td>
+            <td>item 8</td>
+            <td>item 9</td>
+        </tr>
+       </tfoot>
+    </table>
+
+    <!--Anchor tag-->
+    <!--it is used to rediret from current page to another page-->
+    <a href="https://www.qlith.com">Go to Qlith</a>
+    <!--the default behaviour of anchor tag is that open in that page-->
+    <a href="https://www.qlith.com" target="_blank">Click here </a>
+    <!--target="_blank" is used for open the website or page in new tab -->
+
+    <a href="/sept/week1/day3/image/cat.jpg" download="">click for cat</a>
+
+    <!--image tag-->
+    <img src="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg" alt="cat image" height="50px" >
+
+   
+
+    <!--Form tag-->
+    <form action="">
+        <input type="text" name="Fullname" placeholder="Enter your name" value="xyz">
+        <input type="number" placeholder="Enter your number">
+        <input type="email" placeholder="enter email">
+        <input type="password" placeholder="enter password">
+        <input type="radio">
+        <input type="range" >
+        <input type="file">
+        <input type="search" placeholder="Search anything">
+        <input type="submit"> 
+        <input type="reset">
+        <input type="date">
+        <input type="url" placeholder="accept only url">
+        <input type="checkbox">
+        <input type="button" value="Add">
+    </form>
+
+    <!--data list-->
+    <input type="search" list="listitem">
+    <datalist id="listitem">
+        <option value="red">red</option>
+        <option value="blue">blue</option>
+        <option value="green">green</option>
+        <option value="yellow">yellow</option>
+        <option value="sky">sky</option>
+    </datalist>
+
+    <!--select data-->
+    <select name="" id="">
+        <option value="red">red</option>
+        <option value="blue">blue</option>
+        <option value="green">green</option>
+        <option value="yellow">yellow</option>
+        <option value="sky">sky</option>
+    </select>
+    
+    <fieldset>
+        <legend>Your Details</legend>
+        <input type="text" placeholder="Enter your name"><br>
+        <input type="number" placeholder="Enter your number"><br>
+        <input type="email" placeholder="enter your email"><br>
+    </fieldset>
+    
+    <fieldset><!--used to combine multiple input field-->
+        <legend>Your Bank Details</legend>
+        <input type="text" placeholder="Enter your name"><br>
+        <input type="number" placeholder="Enter your number"><br>
+        <input type="email" placeholder="enter your email"><br>
+    </fieldset>
+</body>
+</html> 
