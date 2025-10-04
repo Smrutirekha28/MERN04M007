@@ -1,0 +1,40 @@
+/* 
+SELECTOR
+------------------
+1. Simple Selector
+.....................
+    -> id selector
+    -> class name selector
+    -> tag name selector
+    -> group selector
+    -> universal selector
+2. Combine Selector
+
+*/
+
+
+/* id selector */
+#paragraph1{
+    background-color: aqua;
+}
+
+/* class selector */
+.classRoomPara{
+    color: blueviolet;
+}
+
+/* tag name selector */
+h1{
+    background-color: blue;
+}
+
+/* group selector */
+p,h1{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* universal selector */
+*{
+    background-color: violet;
+    font-style: oblique;
+}
