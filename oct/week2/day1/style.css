@@ -1,0 +1,196 @@
+/* Combine Selector
+-----------------------
+ 1. Descendant Selector(space)
+ =========================
+ -> we can target direct child and indirect child
+
+ 2. Child Selector(>)
+ 3. Adjacent sibling Selector(+)
+ 4. General sibling Selector
+*/
+
+/* combine selector 
+/* Descendant Selector */
+#parent p{
+    background-color: blue;
+    color: aliceblue;
+}
+
+/* child selector */
+#parent>p{
+    background-color: rebeccapurple;
+}
+
+/* adjacent sibling */
+#parent+p{
+    background-color: cadetblue;
+}
+
+/* general sibling selector */
+#parent~ p{
+    background-color: brown;
+    color: aliceblue;
+}
+
+*/
+
+
+/* Attribute Selector */
+h1[id="heading"]{
+    background-color: burlywood;
+    color: aliceblue;
+}
+
+/*4. pseudo class selector
+    -> combine the element by using":"
+5. pseudo element selector */
+
+
+/* pseudo class selector
+----------------------------
+=>hover
+=>active
+=>focus
+    ->use only input tags
+=>visitor
+    ->used for anchor tags
+=>first child
+=>last child
+=>nth child
+    >number, even,odd,an+b
+
+
+*/
+
+/* hover */
+#box{
+    width: 200px;
+    height: 200px;
+    border: 2px solid blue;
+}
+
+#box:hover{
+    background-color: aqua;
+}
+
+
+/* active */
+#box:active{
+    background-color: blueviolet;
+}
+
+
+/* focus */
+input:focus{
+    background-color: chartreuse;
+}
+
+/* visitor */
+a:visited{
+    background-color: chocolate;
+}
+
+
+ul li:first-child{
+    background-color: coral;
+}
+
+ul li:last-child{
+    background-color: cornflowerblue;
+}
+
+ul li:nth-child(4){
+    background-color: darkmagenta;
+}
+
+ul li:nth-child(2n+1){
+    background-color: darkorange;
+}
+
+li:nth-child(n + 2):nth-child(-n + 5) {
+    background-color: blueviolet;
+}
+
+
+
+/* pseudo element selector 
+----------------------------
+=>after
+=>before
+=>first line
+=>first letter
+=>selection
+
+*/
+
+/* after */
+h2::after{
+    content: " of the about section";
+}
+
+/* before */
+h2::before{
+    content: "this is ";
+}
+
+
+#box::first-line{
+    background-color: brown;
+}
+
+#box::first-letter{
+    font-weight: bold;
+    font-size: 20px;
+    color: aqua;
+}
+
+#box::selection{
+    background-color: crimson;
+}
+
+
+/* color 
+    1. RGB (red(255),green(255),blue(255))
+    2. RGBA(red,green,blue,alpha(opcity means visibility))
+*/
+
+h2{
+    color: rgb(255, 21, 0);
+}
+
+h3{
+    color: rgba(105, 50, 200, 1);
+}
+h4{
+    color: #674233;
+}
+
+
+
+/* box model */
+.box-model{
+    width: 200px;
+    height: 200px;
+   
+
+    /* padding-top: 40px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    padding-left: 10px; */
+    padding: 40px 30px 20px 10px;
+
+    /* border-width: 2px;
+    border-style: solid;
+    border-color: blueviolet; */
+
+    border: 2px solid blueviolet;
+     
+
+     margin-top: 40px;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+
+     margin: 0 20px;/* 0 for both top and bottom and 20px for left and right */
+
+}
