@@ -1,0 +1,114 @@
+/* Display property
+-----------------------
+1. Block
+    -> we can change height and width
+2. Inline
+    -> we can  not change height and width
+3. inline-block
+    -> combining property
+4. flex
+    -> only apply for container
+    -> default arrangement is in main axis (x-axis)
+5. grid
+*/
+
+
+
+
+
+p{
+    background-color: brown;
+    display: inline;
+    color: aliceblue;
+    
+}
+
+
+b{
+    background-color: blue;
+    display: block;
+    height: 100px;
+    width: 100px;
+}
+
+strong{
+    background-color: yellowgreen;
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+}
+h1{
+    background-color: aqua;
+    display: inline-block;
+}
+
+
+
+/* flex */
+
+
+#container-box{
+    width: 500px;
+    height: 400px;
+    border: 2px solid red;
+    /* display: flex;
+     flex-direction: column; /*define the x axis(main axis) and y axis(cross axis)*/
+    gap: 2px; 
+    /* justify-content: center; 
+    align-items: center; */
+    /* justify-content: space-around;
+    justify-content: space-between;
+    justify-content: space-evenly; */
+
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3,1fr);
+
+}
+
+
+
+.box{
+   
+    /* width: 50px;
+    height: 50px; */
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* #box1{
+    flex-grow: 5;
+}
+
+#box2{
+    flex-shrink: 3;
+} */
+
+
+#box1{
+    grid-row-start: 1;
+    grid-row-end: 4;
+    background-color: green;
+}
+#box2{
+    grid-column-start:  2;
+    grid-column-end: 4;
+    background-color: green;
+    
+}
+
+#box6{
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 4;
+    background-color: green;
+}
+.box3, .box5, .box7{
+    background-color: red;
+}
+.box4 , .box8{
+    background-color: yellow;
+}
+
+
