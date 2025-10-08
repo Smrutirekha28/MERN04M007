@@ -1,0 +1,56 @@
+.container{
+    max-width: 1024px;
+    /* height: 400px; */
+    border: 1px solid black;
+    margin: auto;
+    padding: 10px;
+    background-color: red;
+    display: flex;
+   /* align-content: end; */
+    flex-wrap: wrap;
+}
+.item{
+    padding: 10px;
+    border: 1px solid blue;
+    background-color: yellow;
+    /* height: 200px;*/
+    width: 300px;
+    /* flex-grow: 1; */
+}
+
+.item2{
+    /* flex-grow: 8; */
+    /* flex-shrink: 0; */
+    /* flex-basis: 500px; */
+    order: 3;
+}
+.item1{
+     order: 6; /*it is a child property */ 
+}
+.item4{
+    order: 6;
+}
+.item3{
+    order: 5;
+}
+.item4{
+    order: 2;
+}
+.item5{
+    order: 1;
+}
+.item6{
+    order: 4;
+}
+
+
+
+  /* units
+  -----------
+    px
+    vh = viewport height
+    vw = viewport width
+    %
+    em = according to font size of root element means multiplicaton of root font size
+    rem = according to root element i.e body 
+    */
