@@ -1,0 +1,144 @@
+#main{
+    height: 900px;
+    width: 2000px;
+    background-color: lightskyblue;
+    margin: 10px 10px 10px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+#sub-main{
+    height: 700px;
+    width: 1700px;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    /* display: flex; */
+    
+}
+
+
+#nav-bar{
+    height: 50px;
+    width: 1700px;
+    /* background-color: aqua; */
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    
+}   
+
+#logo{
+    color: blue;
+    margin: 20px 20px 0px 120px;
+    font-size: 140%;
+    display: flex;
+    
+}
+
+#nac-sec{
+    display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+#home{
+    margin: 21px 700px 0px 500px;
+    color: blue;
+    font-family: sans-serif;
+    font-size: 120%;
+}
+#about{
+    margin: -21px 800px 20px 600px;
+    color: blue;
+    font-family: sans-serif;
+    font-size: 120%;
+}
+#service{
+    margin: -43px 800px 20px 720px;
+    color: blue;
+    font-family: sans-serif;
+    font-size: 120%;
+}
+#contact{
+    margin: -41px 800px 20px 850px;
+    color: blue;
+    font-family: sans-serif;
+    font-size: 120%;
+}
+#nav-btn{
+    background-color: navy;
+    color: aliceblue;
+    height: 40px;
+    width: 80px;
+    font-style: normal;
+    border-radius: 10px;
+    margin: -500px 10px 0px 1200px;
+    padding: 5px;
+    position: relative;
+    bottom: 29px;
+}
+
+#body-part{
+    height: 100px;
+    width: 1700px;
+    display: flex;
+    justify-content: row;
+    align-items: row;
+}
+#gif{
+    height: 480px;
+    padding: 60px;
+    
+}
+#letter{
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    font-size: 5em;
+   color: navy;
+   margin-left: 2px;
+}
+h2{
+    color: navy;
+    margin-left: 2px;
+}
+p{
+    font-size: 2em;
+    
+    margin-left: 2px;
+}
+#btn{
+ 
+    width: 190px;
+    background-color: cadetblue;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 10px;
+ }
+
+ #footer{
+    margin: 500px;
+    margin-left: 10px;
+    display: flex;
+    
+}
+
+#insta{
+    height: 40px;
+    width: 40px;
+    
+}
+#twitter{
+    height: 40px;
+    width: 40px;
+    margin-left: 20px;
+}
+#facebook{
+    height: 40px;
+    width: 70px;
+}
+
