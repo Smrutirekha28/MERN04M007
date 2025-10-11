@@ -1,0 +1,88 @@
+/* *{
+    /* box-sizing: border-box; include the border inside the height and width of the div */
+/* }
+
+#box{
+   width: 500px;
+   height: 500px;
+   border: 20px solid blue; 
+   box-shadow: 5px -2px 24px 17px black; /* left-right,top-bottom,blurness, spreadness,color */
+/* }
+#box h1{
+    font-size: 200px;
+    /* background-color: aqua; */
+    /* background-image: url(https://cdn.pixabay.com/photo/2025/10/05/15/06/autumn-9875155_1280.jpg);
+    background-position:center ;
+    background-size: cover; */
+    /* background-size: contain;
+    background-repeat: no-repeat; */
+     /* color: inherit;/* inherit from the parent */
+     /* color: transparent;
+     background-clip: text;
+     text-shadow: 8px 4px 34px black; /* left-right,top-bottom,blurness,color */
+/* }  */
+
+
+
+/* POSITION 
+-------------
+   types
+   =========
+    ->absolute (alws find parent if not take body as parent)
+    ->relative
+    ->fixed
+    ->sticky
+    ->static
+
+    value
+    ========
+    top
+    right
+    bottom
+    left
+*/
+
+/* 
+ .container{
+    width: 300px;
+    height: 300px;
+    float: left; 
+}
+.container:nth-child(1){
+    background-color: rebeccapurple;
+    position: absolute;
+    top: 50px;
+    left: 120px;
+}
+.container:nth-child(2){
+    background-color:aqua;
+    position: relative;
+    top: 40px;
+    left: 10px;
+    
+}
+.container:nth-child(3){
+    background-color:chartreuse;
+}  */
+
+
+
+nav {
+    display: flex;
+    border: 5px solid black;
+    position: fixed;
+}
+img{
+    width: 100px;
+}
+nav ul{
+    display: flex;
+    gap: 20px;
+    font-size: 2em;
+    
+}
+#para{
+    position: sticky;
+    background-color: brown;
+    top: 0px;
+}

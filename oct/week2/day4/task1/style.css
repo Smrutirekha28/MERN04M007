@@ -1,0 +1,71 @@
+.container{    
+    width: 1800px;
+    padding: 5px;
+    border: 2px solid black;
+    background-color: #000000cc;
+    display: grid;
+    color: aliceblue; 
+    grid-template-columns: repeat(4,1fr);
+    gap: 5px;
+    grid-auto-rows: 200px;
+    grid-template-areas: "heading1 heading2 heading3 heading4"
+                          "heading5 heading6 heading6 heading7"
+                          "heading5 heading8 heading9 heading7"
+                          ;
+}
+
+.item{
+    padding: 10px;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    font-size: 25px;
+    
+    
+}
+
+.container .item:nth-child(1){
+    grid-area: heading1;
+}
+.container .item:nth-child(2){
+    grid-area: heading2;
+}
+.container .item:nth-child(3){
+    grid-area: heading3;
+}
+.container .item:nth-child(4){
+    grid-area: heading4;
+}
+.container .item:nth-child(5){
+    grid-area: heading5;
+}
+.container .item:nth-child(6){
+    grid-area: heading6;
+}
+.container .item:nth-child(7){
+    grid-area: heading7;
+}
+.container .item:nth-child(8){
+    grid-area: heading8;
+}
+.container .item:nth-child(9){
+    grid-area: heading9;
+}
+
+
+.heading1 , .heading4, .heading6{
+    background-color: black;
+
+}
+
+.heading5 , .heading7{
+    background-color: cadetblue;
+} 
+.heading2 , .heading8{
+    background-color: skyblue;
+}
+.heading3 , .heading9{
+    background-color:darkgreen;
+}

@@ -1,0 +1,162 @@
+
+.container{
+  height: 100vh;
+  position: relative;
+}
+.parent{
+    height: 700px;
+    width: 800px;
+    background-color:#f0f0f0;
+    border-radius: 20px;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    
+}
+
+nav{
+    height: 100px;
+    width: 800px;
+    display: flex;
+    padding: 20px;
+    gap: 280px;
+}
+
+.logo{
+    font-size: 28px;
+}
+
+.anchor{
+    font-size: 23px;
+    display: flex;
+    gap: 88px;
+}
+a{
+    text-decoration: none;
+    
+}
+.signup-btn{
+ border: 1px solid #ccc;
+  background: transparent;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  position: absolute;
+  left: 670px;
+  top: 37px;
+  font-size: 18px;
+  
+}
+
+.left-child{
+    height: 600px;
+    width: 600px;
+    background-color: bisque;
+    border-radius: 10px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+
+.right-child{
+    height: 300px;
+    width: 300px;
+    background-color: blueviolet;
+    position: absolute;
+    left: 480px;
+    top: 180px;
+    border-radius: 20px;
+}
+
+
+.btns {
+  background: #f0f0f0;
+  border-radius: 30px;
+  display: inline-flex;
+  padding: 5px;
+  margin-bottom: 25px;
+}
+
+.btns button {
+  border: none;
+  background: transparent;
+  padding: 8px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #555;
+}
+
+.btns .active {
+  background: #111;
+  color: #fff;
+}
+
+.left h1 {
+  font-size: 2.3rem;
+  margin-left: 15px;
+  margin-bottom: 25px;
+
+}
+
+
+
+/* Search Box */
+.search-box {
+  width: 435px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  padding: 5px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  margin-left: 3px;
+}
+
+.search-box input[type="text"] {
+  flex: 1;
+  border: none;
+  font-size: 0.95rem;
+  padding: 8px;
+  color: #333;
+}
+
+.co-location {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.search-btn {
+  background: #ff5a5f;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.filters {
+  display: flex;
+  gap: 2px;
+}
+
+.filters select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+
+}
+
+.right-child img{
+    height: 300px;
+    width: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+}
