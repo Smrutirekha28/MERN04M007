@@ -66,8 +66,8 @@
     /* overflow: scroll; */
     /* overflow-y: scroll; */
     /* resize: both; */
-    /* resize: horizontal;
-    resize: vertical; */
+    resize: horizontal;
+    resize: vertical;
 
 }
 
