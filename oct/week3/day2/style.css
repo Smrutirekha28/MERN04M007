@@ -1,0 +1,128 @@
+.card{
+    width: 190px;
+    height: 270px;
+    background-color: #07182e;
+    border-radius: 10px;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card h2{
+    z-index: 1;
+    color: #fff;
+    font-size: 2em;
+}
+ .card::before{     /*before is used in the middle-one */
+    content: "";
+    height: 130%;
+    width: 100%;
+    background: linear-gradient(45deg,rgb(0,183,255),rgb(255,48,255));
+    position: absolute;
+    animation: roundScreen 2s linear infinite;
+
+}
+
+@keyframes roundScreen {
+    from{
+        rotate: 0deg;
+    }
+    to{
+        rotate: 360deg;
+    }
+}
+
+.card::after{
+    content: "";
+    width: 97%;
+    height: 97%;
+    background-color: #07182e;
+    /* inset: 5px;   inset is a position property used for margin */
+    position: absolute;
+}
+
+.menu{
+    padding: 5px;
+    width: 50vw;
+    height: 50px;
+    box-shadow: 2px 2px 5px black;
+    border-radius: 10px;
+    margin: 20px auto;
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+   
+}
+
+.menu li{
+     transition: all 2s ease;
+     position: relative;
+}
+
+.menu li:hover{
+    color: blue;
+    cursor: pointer;
+}
+.submenu{
+    width: 100px;
+    background-color: green;
+    position: absolute;
+    top: 40px;
+    /* display: none; */
+    transform: scaleY(0);
+    transition: all 2s ease;
+    transform-origin: top;
+    z-index: 1;
+}
+.submenu li{
+    padding: 10px;
+    list-style: none;
+
+}
+.menu li:hover .submenu{
+    /* display: block; */
+    transform: scaleY(1);
+
+}
+
+.carousel{
+    width: 700px;
+    height: 150px;
+    border: 2px solid red;
+    margin: 20px auto;
+    display: flex;
+    gap: 5px;
+    overflow-x: auto ;
+}
+
+.carousel::-webkit-scrollbar{
+    display: none;
+}
+.carousel-item{
+    /* flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 10em; */
+    flex: 0 0 10em;
+    height: 100%;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.group{
+    gap: 5px;
+    display: flex;
+    justify-content: center;
+    animation: carouselEffect 10s linear infinite;
+}
+@keyframes carouselEffect{
+    from{
+        translate: 0px;
+    }
+    to{
+        translate: -100%;
+    }
+}
