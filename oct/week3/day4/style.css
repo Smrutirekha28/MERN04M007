@@ -4,34 +4,57 @@
     border: 2px solid black;
     background-color: #000000cc;
     display: grid;
-    color: aliceblue;  
+    color: black;  
     grid-template-columns: repeat(3,1fr);
     gap: 5px;
-    grid-auto-rows: 100px;
+    grid-template-rows: 100px 200px 200px 100px;
     grid-template-areas: "header header header"
-                         "sidebar content3 content3"
-                         "sidebar content1 content2"
-                         "foot foot foot";
+                          "sidebar content1 content1"
+                          "sidebar content2 content3"
+                          "foot foot foot";
 }
 .item{
     padding: 10px;
     border: 1px solid white;
+    text-align: center;
 }
 .container .item:nth-child(1){
     grid-area: header;
+    background-color: aquamarine;
 }
 .container .item:nth-child(2){
     grid-area: sidebar;
+    background-color: blue;
 }
 .container .item:nth-child(3){
     grid-area: content1;
+    background-color: brown;
 }
 .container .item:nth-child(4){
     grid-area: content2;
+    background-color: chartreuse;
 }
 .container .item:nth-child(5){
     grid-area: content3;
+    background-color:chocolate;
 }
 .container .item:nth-child(6){
     grid-area: foot;
+    background-color: blueviolet;
+}
+
+
+/* 
+mobile = 480
+tab = 760-1024 */
+
+
+@media (width<=480px) {
+    body{
+        background-color: aqua;
+
+    }
+    .container{
+        grid-template-columns: 1fr;
+    }
 }

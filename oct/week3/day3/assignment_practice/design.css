@@ -1,15 +1,43 @@
+.parent{
+    position: relative;
+    display: flex;
+}
+.yellow{
+    height: 940px;
+    width: 1020px;
+    background-color: rgb(188, 128, 72);
+}
+.blue{
+    height: 940px;
+    width: 1020px;
+    background-color: rgb(9, 150, 201);
+}
 
+.red{
+    height: 400px;
+    width: 400px;
+    background-color: brown;
+    position: absolute;
+    
+}
+
+/* body{
+    position: absolute;
+    top: 10%;
+} */
 .container{
     margin: 0px;
     display: flex;
-    position: relative;
-    
+    position: absolute;
+    left: 25%;
+    top: 10%;
+
 }
 
 .left-child{
     height: 700px;
     width: 600px;
-    background-color:antiquewhite;
+    background-color:rgb(250, 235, 215);
     /* gap: 10px; */
     /* position: relative; */
     
@@ -18,12 +46,16 @@
 
 .left-nav{
     font-size: 30px;
-    margin-left: 40px;
-    /* height: 70px;
+    padding: 5px;
+    margin-left: 0px;
+    height: 70px;
     width: 200px;
-    background-color: green;
-    margin-top: 0px; */
-    
+    background-color: rgb(38, 34, 60);
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
 }
 .element{
     margin-left: 150px;
