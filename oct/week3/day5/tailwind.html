@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+
+    <style>
+         /* *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        } */
+        /*nav{
+            width: 100vw;
+            height: 60px;
+            box-shadow: 2px 2px 5px black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .list{
+            width: 60%;
+            height: 100%;
+        }
+        .list ul{
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            align-items: center;  /* always depend on the  height*/
+        /* }
+        .logo{
+            margin-left: 30px;
+        }
+        .logo p{
+            color: blue;
+            font-size: 1.2em;
+        }
+        .logo p span{
+            color: orangered;
+        }
+        ul li:hover{
+            color: blue;
+            cursor: pointer;
+        } */
+    </style>
+</head>
+<body>
+    <nav class="w-screen h-[60px] flex justify-between items-center shadow-[2px_2px_5px_black]">
+        <div class="ml-10 ">
+            <p class="text-blue-800">Qlith <span class="text-orange-500">Innovation</span></p>
+        </div>
+        <div class="h-full w-[60%]">
+            <ul class="flex h-full justify-around items-center ">
+                <li class="hover:text-blue-500 cursor-pointer">Home</li>
+                <li class="hover:text-blue-500 cursor-pointer">Service</li>
+                <li class="hover:text-blue-500 cursor-pointer">About</li>
+                <li class="hover:text-blue-500 cursor-pointer">Contatct</li>
+            </ul>
+        </div>
+    </nav>
+</body>
+</html>
