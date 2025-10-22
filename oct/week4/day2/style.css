@@ -1,0 +1,93 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    height: 970px;
+    width: 2040px;
+    background-color: beige;
+    position: relative;
+} */
+
+/* .navigation ul{
+    display: flex;
+    height: 50px;
+    width: 1300px;
+    background-color: transparent;
+    justify-content: space-evenly;
+    padding: 14px;
+   
+} */
+
+/* .white_part{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+} */
+
+
+/* img{
+    position: absolute;
+    left: 650px;
+    top: 200px;
+    height: 500px;
+    width: 500px;
+} */
+/* .text{
+     position: absolute;
+    left: 100px;
+    top: 300px;   
+} */
+
+
+/* 
+.pink_part{
+    height: 970px;
+    width: 740px;
+    position: absolute;
+    background-color: rgb(233, 162, 173);
+    left: 1300px;
+    top: 0px;
+} */
+
+/* .login{
+    height: 50px;
+    width: 150px;
+    margin-left: 560px;
+    margin-top: 10px;
+    background-color: transparent;
+    border-radius: 30px;
+    color: aliceblue;
+    border: 5px solid white;
+    border-radius: 10px 190px;
+    font-size: 20px;
+} */
+
+/* .right_part{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    gap: 50px;
+} */
+/* .right_part h1{
+    font-size: 50px;
+    color: white;
+} */
+
+/* .right_part p{
+    font-size: 32px;
+    color: white;
+} */
+
+
+/* .right_part button{
+    height: 50px;
+    width: 150px;
+    border-radius: 10px 190px;
+    background-color: white;
+    color: peachpuff;
+    border: 2px solid white;
+} */
