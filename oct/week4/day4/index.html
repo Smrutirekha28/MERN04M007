@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height: 200px;
+            width: 200px;
+            background-color: brown;
+        }
+        @media (width<=480px) {
+            .container{
+                background-color: aqua;
+            }
+        }
+        @media (width>=480px) and (width<=760px) {
+            .container{
+                background-color: black;
+            }
+        }
+        @media (width>=760px) and (width<=1024px) {
+            .container{
+                background-color:blueviolet;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- @media query is used for responsiveness and it is a overwrite property-->
+
+    <!-- <div class="container">
+
+    </div> -->
+    <!-- /* transition change the behaviour and movement and transform change the state */ -->
+</body>
+</html>
