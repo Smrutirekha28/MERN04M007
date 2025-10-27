@@ -35,6 +35,10 @@ console.log($name1);
 //     ->where
 //     ->how
 
+
+// declaration (where)
+
+
 //declaration in global level
 var name = "xyz"
 console.log(name);

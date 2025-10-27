@@ -8,7 +8,7 @@ Variable in Javascript
 
 Rules of variable declaration
 ===============================
--> Variable namex are case sensitive , "a" & "A"is different
+-> Variable name are case sensitive , "a" & "A"is different
 -> only letters , digits, underscore &  $ is  allowed but not space
 ->only letters , underscore or $ should be 1st character
 -> reserved words can not be variable names.
