@@ -6,6 +6,7 @@ special types of symbol which perform opertaion on data
 ->assignment(=,+=,-=,*=,%=,**=)
 ->comparison(==,===,!=,!==,>,>=,<,<=)(result boolean data type(true,false))
 ->logical (&&,||,!)
+->ternary 
 ====================
  &&-> if first value is true then  move forward
  ||-> if first value is false then move forward
