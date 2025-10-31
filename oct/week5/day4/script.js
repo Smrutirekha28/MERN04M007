@@ -55,13 +55,16 @@ while(a<=10){
 //   }
 // }
 
-// const num1=0;
-// let num2 = prompt("enter any number");
-// while(num1 == num2){
-//     console.log("Matched");
+const num1=0;
+while(true){
+    let num2 = prompt("enter any number");
+    if(num1 === num2){
+    console.log("Matched");
+    break;
+    }
 
-// }
-// console.log("not matched");
+}
+
 
 
 
