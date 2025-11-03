@@ -12,5 +12,5 @@ Non-primitive (collection of data)
 -------------
     multiple value can store in single variable
 
-
+->object is mutable (change the value)
 object is a data type which store in format of key and value
