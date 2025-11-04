@@ -9,4 +9,10 @@ String
 
 template literal
 ======================
-a way to have embedded expression in 
+a way to have embedded expression in string
+work like concatenation
+
+interpolation
+==================
+act like placeholder
+syntax `${}`
