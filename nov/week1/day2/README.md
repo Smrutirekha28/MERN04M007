@@ -12,4 +12,5 @@ String Method
     ->give the last index-1
     ->if 1 value is added then it take it as first index and go to last index
     ->starting index < ending index>
+    ->it only return array
 ->split(break the sentence and store in array format)
