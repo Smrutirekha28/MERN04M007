@@ -49,7 +49,7 @@ console.log(str1.replaceAll(" ","-"));
 
 //7.Extract the first 5 characters of a string
 let str2 ="Hii Everyone";
-console.log(str2.slice(4, 9));
+console.log(str2.slice(4,9));
 
 
 //8.Concatenate 2string without using + or template literal
