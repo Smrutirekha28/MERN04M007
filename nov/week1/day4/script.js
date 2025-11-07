@@ -1,5 +1,7 @@
 console.log("Today we are going to learn Arrays");
 // two ways
+// ->literal format
+// ->object creation
 let arr=[[0,[9,8]],2,3,4];
 console.log(arr)
 
@@ -13,7 +15,7 @@ console.log(newArr[0])
 console.log(newArr)
 
 
-let afterAddingArr=Array.of(arr,newArr,"jksdja",80)
+let afterAddingArr=Array.of(arr,newArr,"jksdja",80)//store ONE ARRAY in another array
 let firstIdxArr=afterAddingArr[0];
 
 
