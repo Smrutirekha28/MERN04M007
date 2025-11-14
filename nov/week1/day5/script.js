@@ -2,15 +2,17 @@ console.log("today we are going to learn arrays methods");
 let arr=[1,2,3,4,5]
 console.log(arr);
 
-let arrObj = new Array(6,7,78,9,0)
-console.log(arrObj);
+// let arrObj = new Array(6,7,78,9,0)
+// console.log(arrObj);
 
 
-console.log(Array(3));//it create an empty array with 3 empty index 
-console.log(Array(3).fill("js"));//it create an empty array with 3 empty index and fill the empty indexes as "js"
+// console.log(Array(3));//it create an empty array with 3 empty index 
+// console.log(Array(3).fill("js"));//it create an empty array with 3 empty index and fill the empty indexes as "js"
 
 
-console.log(Array.of(1,2,3,4,5));
+// console.log(Array.of(1,2,3,4,5));
+console.log(Array.of(arr));//[1,2,3,4,5]
+
 
 console.log(Array.from("abc"));//['a', 'b', 'c'] it store the whole string in single single index
 
@@ -64,13 +66,13 @@ console.log(Array.isArray());// if we give the variable name it will show that t
 console.log(Array.isArray(arr));//true
 
 //reverse()// also change in original array
-console.log(arr.reverse());//[5, 4, 3, 2, 1]
-console.log(arr);
+// console.log(arr.reverse());//[5, 4, 3, 2, 1]
+// console.log(arr);
 
 
 //toReversed()//not change in original array
-console.log(arr.toReversed());//[1, 2, 3, 4, 5]
-console.log(arr);//[5, 4, 3, 2, 1]
+// console.log(arr.toReversed());//[1, 2, 3, 4, 5]
+// console.log(arr);//[5, 4, 3, 2, 1]
 
 
 
@@ -113,4 +115,4 @@ console.log(arr.toString());
 console.log([[1,2],[4,3],[7,8]].join(""));//1,24,37,8
 
 //flat() 
-console.log([1,2],[4,3],[7,8].flat());//all the elements are store in single array
+console.log([[1,2],[4,3],[7]].flat());//all the elements are store in single array

@@ -26,11 +26,6 @@ console.log(fruitArr);
 
 
 
-
-
-
-
-
 //- Find the **length** of an array without using `.length` property (using loop).
 //count++
 
@@ -72,13 +67,9 @@ console.log(longest);
 
 
 // - Reverse a string using array methods (`split()`, `reverse()`, `join()`).
-let strArr =[ "Hii! Welcome to my world."]
-// let splitArr = strArr.split(" ");
+let strArr = "Hii! Welcome to my world."
+console.log(strArr.split("").reverse().join(""));
 
-
-let reverseArr = strArr.reverse();
-console.log(reverseArr);
-// ------------------------------------------------doubt
 
 
 
@@ -98,7 +89,10 @@ console.log(countNumber);
 
 // - Create a new array that contains the **length of each string** from `["React", "Node", "MongoDB"]`.
 let newArr=["React", "Node", "MongoDB"];
-// ------------------------------------------------doubt
+let strNum=[];
+for(let v of newArr){
+  strNum.push(v.length);
+}console.log(strNum);
 
 
 
@@ -121,6 +115,16 @@ for(let v of originalArr){
 
 // - Replace all negative numbers in `[4, -2, 6, -9, 7]` with `0`.
 let numberArr = [4, -2, 6, -9, 7];
-let replaceArr = numberArr.splice(0, 1,2)
-console.log(replaceArr);
-// ------------------------------------------------doubt
+for(let i =0;i<numberArr.length;i++){
+  if(numberArr[i]<0){
+    numberArr.splice(i,1,0)
+  }
+}console.log(numberArr);
+// ------------------------ or --------------------
+ 
+for(let i =0;i<numberArr.length;i++){
+  if(numberArr[i]<0){
+    numberArr[i]=0;
+  }
+}console.log(numberArr);
+
