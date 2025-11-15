@@ -15,7 +15,7 @@ Types of Function
 ->expressional function(it is function which is in the form of expression)
 ->higher order function(it is function which will accept a function as a argument, and which will return a function)
 ->callback function(it is function which is used as argument)
-->ITF(immdiate invoke function)(it is function which has direct declartion and instant invocation or calling)
+->IIF(immdiate invoke function)(it is function which has direct declartion and instant invocation or calling)
 
 
 
