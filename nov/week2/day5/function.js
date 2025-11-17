@@ -96,7 +96,7 @@ let returnFun=function(){
         name:"xyz",
         age:20
     }
-    return obj;
+    return obj;//function currying
 }
 let value=returnFun()
 console.log(value);
@@ -113,14 +113,7 @@ arrowFun(); //this is a arrow function
 
 
 
-let arrowFunction=(a,b)=>{
-    let sum = a+b;
-    let sub = a-b;
-    
-    return sum;
-       
-}
-console.log(arrowFunction(10,20))
+
 
 
 
