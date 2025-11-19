@@ -11,11 +11,11 @@ console.log(str3);
 
 
 let str="hello";
-console.log(str);
-console.log(str[1]);
+// console.log(str);
+// console.log(str[1]);
 
 str[0]="s";
-console.log(str);
+console.log(str);//---------------------------------------------------------------------doubt
 
 
 let strObj = new String();// new String() is a object and here strObj store the object of a string

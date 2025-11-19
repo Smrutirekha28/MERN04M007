@@ -86,4 +86,4 @@ console.log((num2++ >4) && (num1===num2)||(num1-- != num2));
 
 let n="1";
 console.log(n-1);
-console.log(1+3-1+    +n+4+"5");
+console.log(1+3-1+    +n+4+"5");//doubt

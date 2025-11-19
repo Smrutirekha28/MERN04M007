@@ -112,7 +112,7 @@ console.log(arr.toString());
 
 
 
-console.log([[1,2],[4,3],[7,8]].join(""));//1,24,37,8
+console.log([[1,2],[4,3],[7,8]].join(""));//1,24,37,8  ..............................doubt
 
 //flat() 
 console.log([[1,2],[4,3],[7]].flat());//all the elements are store in single array

@@ -108,10 +108,8 @@ let filterArr = arr.filter((v)=>{
     return v%2==0;
 })
 console.log(filterArr);
-
-
-
-
+ 
+ 
 
 //--------------reduce-------------------
 //accept callback function
@@ -126,4 +124,6 @@ console.log(additionValue);//15
 
 let mult= arr.reduce((mult,v)=> mult * v,1);
 console.log(mult);//120
+
+
 
