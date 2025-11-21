@@ -9,7 +9,7 @@ DOM(Document object model)
                                 ->img
                                 ->p
                                 ->h1
-                            
+->any element is store in object format
 ->window is the global object and it is containing all the child object
 ->if we want to access the html element in js then first we have to access the document
 
