@@ -31,7 +31,7 @@ console.log(classes);
 console.log(h1.tagName);//H1
 
 //className()
-//return class name
+//return class name in text format
 
 
 //textContent()
@@ -56,4 +56,4 @@ console.log(divFirst);//<div class="box" id="heading" style="visibility: hidden;
 
 
 // -------------------Question-----------------
-// diff between htmlcollection and node list 
+// diff between htmlcollection(does not filter out the object) and node list 
