@@ -1,3 +1,5 @@
+const { Children } = require("react");
+
 let registerForm = document.getElementById("register-form");
 registerForm.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -38,3 +40,7 @@ loginForm.addEventListener("submit", (e) => {
 
     loginForm.reset();
 })
+//propagation
+// ->2types
+// capturing ->parent->Child( true)
+// bubble->child->parent(false)
