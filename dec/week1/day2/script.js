@@ -48,8 +48,9 @@
 //await
 //======
 //it work like synchronous 
-//it is a keyword which is used to wait
+//it is a keyword which is used for waiting the same statement 
 //used to handel promises
+//inside the async block await block is always used
 
 
 
@@ -80,7 +81,8 @@ getData()
 // ==============
 // it is a Object
 // 4 types
-//      -> get 
-//     ->create (post)
-//     ->update(put)
-//     ->delete
+//      -> get  ->fetching the data
+//     ->create (post)  ->creating the data
+//     ->update(put)   ->updating the data
+//     ->delete     ->delete the existing data
+//these goes under http request
