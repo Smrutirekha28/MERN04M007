@@ -47,7 +47,8 @@ console.log(childFunReturnValue);//this is a child function 10
 
 
 //IIF(immdiate invoke(calling) function)
-(function(){
+(function()//declaration
+{
     console.log("IIF function");
     return ()=>{console.log("nested fun");
     }
@@ -124,6 +125,4 @@ console.log(additionValue);//15
 
 let mult= arr.reduce((mult,v)=> mult * v,1);
 console.log(mult);//120
-
-
 

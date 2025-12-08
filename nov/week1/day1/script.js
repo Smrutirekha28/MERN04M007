@@ -52,6 +52,7 @@ console.log(nameStr,30);//brand bacardi 30 (here 30 is the number)
 console.log(nameStr+ 30);//brand bacardi30 (here 30 is the string)
 
 //interpolation
+//it always use backtic ``
 // let ml = 50;
  let ml=60;
 console.log(`brand bacardi ${ml}ml`)

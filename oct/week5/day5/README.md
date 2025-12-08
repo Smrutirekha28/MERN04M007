@@ -1,6 +1,7 @@
 for-of
 ========
 ->ES6+
+->only ised for iterable statement(array,string)
 ->direct return value
 ->used only in array
 ->not used in object because it direct access the value without key
@@ -8,9 +9,9 @@ for-of
 for-in
 =======
 ->for-iteration
-->in-index
-->it is only access key and index
-->give direct value
+->in-index or keys
+->it is access both key and index
+
 
 
 

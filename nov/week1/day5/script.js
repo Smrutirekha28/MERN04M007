@@ -19,9 +19,6 @@ console.log(Array.from("abc"));//['a', 'b', 'c'] it store the whole string in si
 
 
 //manipulation method
-
-
-
 // push()//it store the element in last index , accept single and multiple also
 arr.push(6);
 console.log(arr);

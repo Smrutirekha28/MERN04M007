@@ -107,6 +107,9 @@ let outArr = products.some(v=>{
 })
 console.log(outArr);
 
+//Set
+//it remove duplicates automatically
+
 
 
 //find() practice
