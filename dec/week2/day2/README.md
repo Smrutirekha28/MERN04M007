@@ -36,3 +36,11 @@ index.html
 ->it is by default function based
 -> it is by default html page
 -> if we create a jsx file , the first character is capital (eg: Home.jsx)
+
+
+how to know hook
+=================
+->if "use" keyword is used there then you can know that it is a hook
+
+
+context object is a type of object where if any child want to call it from the parent by using hook it can be accessed
