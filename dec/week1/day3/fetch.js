@@ -20,7 +20,7 @@ let createData = async ()=>{
             desc: "this is qlith innovation",
             age:20
         }),
-        headers:{
+        headers:{//converter
             "Content-type": 'application/json'
         },
     })

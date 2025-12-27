@@ -44,3 +44,10 @@ how to know hook
 
 
 context object is a type of object where if any child want to call it from the parent by using hook it can be accessed
+
+
+
+work of functional component
+=============================
+->perform a specific task
+->reuse
