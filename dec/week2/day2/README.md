@@ -29,6 +29,7 @@ index.html
 -> it is a file where we can write both html and javascript
 ->if we want  to write any javascript code we have to use {}
 ->eg: {console.log("hii")}
+->if we want  to write any html code we have to use ()
 ->it is a component
 ->component has two part
     1. class based
