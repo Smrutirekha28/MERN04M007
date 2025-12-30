@@ -23,7 +23,7 @@ function App() {
     
   // })
 
-
+//when the state variable is updated at that time rendering occur(when the excution start from the top at that time the rndering is occured)
 
   // useEffect(()=>{
   //   console.log("it is execute at first render");

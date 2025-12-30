@@ -4,7 +4,7 @@ import './App.css'
 import Child from './Child';
 import Child3 from './Child3';
 import Child2 from './Child2';
-let nameContext = createContext();// conetxt object creation
+let nameContext = createContext();// conetxt object creation(to avoid props concept and by this every child can access it)
 let themeContext = createContext();
 let funContext = createContext();
 let funcContext = createContext();

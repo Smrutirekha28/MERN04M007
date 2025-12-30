@@ -1,7 +1,7 @@
 import React from 'react'
 import {useParams} from 'react-router'
 function Cart() {
-    let {id} = useParams();//useParam find the value when the value is given to it
+    let {id} = useParams();//useParam catch the id  from the url
   return (
     <div>Cart
         <br />
