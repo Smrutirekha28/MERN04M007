@@ -1,0 +1,378 @@
+C:\Users\HP>mongosh
+Current Mongosh Log ID: 69678d1d77a4275b561e2620
+Connecting to:          mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.5.10
+Using MongoDB:          8.2.3
+Using Mongosh:          2.5.10
+
+For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2026-01-14T10:31:52.832+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+------
+
+Warning: Found ~/.mongorc.js, but not ~/.mongoshrc.js. ~/.mongorc.js will not be loaded.
+  You may want to copy or rename ~/.mongorc.js to ~/.mongoshrc.js.
+test> show dbs
+admin   40.00 KiB
+config  12.00 KiB
+local   40.00 KiB
+test> use Post
+switched to db Post
+Post> show dbs
+admin   40.00 KiB
+config  60.00 KiB
+local   40.00 KiB
+Post> db.Post.insertOne({title:"song",desc:"this is a song post",like:4})
+{
+  acknowledged: true,
+  insertedId: ObjectId('696790f477a4275b561e2621')
+}
+Post> db.Post.insertMany([{title:'vlog',desc:"this is a vlog desc",like:10},{title:'motivation',desc:"this is a motivation desc",like:50},{title:'saiyaara',desc:"this is a movie ",like:1000}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('6967911077a4275b561e2622'),
+    '1': ObjectId('6967911077a4275b561e2623'),
+    '2': ObjectId('6967911077a4275b561e2624')
+  }
+}
+Post> db.Post.find()
+[
+  {
+    _id: ObjectId('696790f477a4275b561e2621'),
+    title: 'song',
+    desc: 'this is a song post',
+    like: 4
+  },
+  {
+    _id: ObjectId('6967911077a4275b561e2622'),
+    title: 'vlog',
+    desc: 'this is a vlog desc',
+    like: 10
+  },
+  {
+    _id: ObjectId('6967911077a4275b561e2623'),
+    title: 'motivation',
+    desc: 'this is a motivation desc',
+    like: 50
+  },
+  {
+    _id: ObjectId('6967911077a4275b561e2624'),
+    title: 'saiyaara',
+    desc: 'this is a movie ',
+    like: 1000
+  }
+]
+Post> show collections
+Post
+Post> db.Post.find({title:"song"})
+[
+  {
+    _id: ObjectId('696790f477a4275b561e2621'),
+    title: 'song',
+    desc: 'this is a song post',
+    like: 4
+  }
+]
+Post> db.Post.insertOne({title:"song",desc:"this is song 2"})
+{
+  acknowledged: true,
+  insertedId: ObjectId('696792fb77a4275b561e2625')
+}
+Post> db.Post.find({title:"song"})
+[
+  {
+    _id: ObjectId('696790f477a4275b561e2621'),
+    title: 'song',
+    desc: 'this is a song post',
+    like: 4
+  },
+  {
+    _id: ObjectId('696792fb77a4275b561e2625'),
+    title: 'song',
+    desc: 'this is song 2'
+  }
+]
+Post> db.Post.findOne({title:"song"})
+{
+  _id: ObjectId('696790f477a4275b561e2621'),
+  title: 'song',
+  desc: 'this is a song post',
+  like: 4
+}
+Post> db.Post.find({},{title:1})
+[
+  { _id: ObjectId('696790f477a4275b561e2621'), title: 'song' },
+  { _id: ObjectId('6967911077a4275b561e2622'), title: 'vlog' },
+  { _id: ObjectId('6967911077a4275b561e2623'), title: 'motivation' },
+  { _id: ObjectId('6967911077a4275b561e2624'), title: 'saiyaara' },
+  { _id: ObjectId('696792fb77a4275b561e2625'), title: 'song' }
+]
+Post> db.Post.find({},{title:0})
+[
+  {
+    _id: ObjectId('696790f477a4275b561e2621'),
+    desc: 'this is a song post',
+    like: 4
+  },
+  {
+    _id: ObjectId('6967911077a4275b561e2622'),
+    desc: 'this is a vlog desc',
+    like: 10
+  },
+  {
+    _id: ObjectId('6967911077a4275b561e2623'),
+    desc: 'this is a motivation desc',
+    like: 50
+  },
+  {
+    _id: ObjectId('6967911077a4275b561e2624'),
+    desc: 'this is a movie ',
+    like: 1000
+  },
+  { _id: ObjectId('696792fb77a4275b561e2625'), desc: 'this is song 2' }
+]
+Post> db.Post.updateOne({title:"vlog"},{desc:"vlog description",like:3})
+MongoInvalidArgumentError: Update document requires atomic operators
+Post> db.Post.updateOne({title:"vlog"},{$set:{desc:"vlog description"}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+Post> db.Post.updateOne({title:"story"},{$set:{desc:"story description"}},{upsert:true})
+{
+  acknowledged: true,
+  insertedId: ObjectId('696798d32f2c41e1db36cb3a'),
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 1
+}
+Post> db.Post.find()
+[
+  {
+    _id: ObjectId('696790f477a4275b561e2621'),
+    title: 'song',
+    desc: 'this is a song post',
+    like: 4
+  },
+  {
+    _id: ObjectId('6967911077a4275b561e2622'),
+    title: 'vlog',
+    desc: 'vlog description',
+    like: 10
+  },
+  {
+    _id: ObjectId('6967911077a4275b561e2623'),
+    title: 'motivation',
+    desc: 'this is a motivation desc',
+    like: 50
+  },
+  {
+    _id: ObjectId('6967911077a4275b561e2624'),
+    title: 'saiyaara',
+    desc: 'this is a movie ',
+    like: 1000
+  },
+  {
+    _id: ObjectId('696792fb77a4275b561e2625'),
+    title: 'song',
+    desc: 'this is song 2'
+  },
+  {
+    _id: ObjectId('696798d32f2c41e1db36cb3a'),
+    title: 'story',
+    desc: 'story description'
+  }
+]
+Post> db.Post.updateOne({title:"saiyaara"},{$set:{title:"movie"}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+Post> db.Post.find()
+[
+  {
+    _id: ObjectId('696790f477a4275b561e2621'),
+    title: 'song',
+    desc: 'this is a song post',
+    like: 4
+  },
+  {
+    _id: ObjectId('6967911077a4275b561e2622'),
+    title: 'vlog',
+    desc: 'vlog description',
+    like: 10
+  },
+  {
+    _id: ObjectId('6967911077a4275b561e2623'),
+    title: 'motivation',
+    desc: 'this is a motivation desc',
+    like: 50
+  },
+  {
+    _id: ObjectId('6967911077a4275b561e2624'),
+    title: 'movie',
+    desc: 'this is a movie ',
+    like: 1000
+  },
+  {
+    _id: ObjectId('696792fb77a4275b561e2625'),
+    title: 'song',
+    desc: 'this is song 2'
+  },
+  {
+    _id: ObjectId('696798d32f2c41e1db36cb3a'),
+    title: 'story',
+    desc: 'story description'
+  }
+]
+Post> db.Post.updateOne({title:"song"},{$unset:{like:""}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+Post> db.Post.find()
+[
+  {
+    _id: ObjectId('696790f477a4275b561e2621'),
+    title: 'song',
+    desc: 'this is a song post'
+  },
+  {
+    _id: ObjectId('6967911077a4275b561e2622'),
+    title: 'vlog',
+    desc: 'vlog description',
+    like: 10
+  },
+  {
+    _id: ObjectId('6967911077a4275b561e2623'),
+    title: 'motivation',
+    desc: 'this is a motivation desc',
+    like: 50
+  },
+  {
+    _id: ObjectId('6967911077a4275b561e2624'),
+    title: 'movie',
+    desc: 'this is a movie ',
+    like: 1000
+  },
+  {
+    _id: ObjectId('696792fb77a4275b561e2625'),
+    title: 'song',
+    desc: 'this is song 2'
+  },
+  {
+    _id: ObjectId('696798d32f2c41e1db36cb3a'),
+    title: 'story',
+    desc: 'story description'
+  }
+]
+Post> db.Post.updateMany({title:"song"},{$set:{like:19}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 2,
+  modifiedCount: 2,
+  upsertedCount: 0
+}
+Post> db.Post.find()
+[
+  {
+    _id: ObjectId('696790f477a4275b561e2621'),
+    title: 'song',
+    desc: 'this is a song post',
+    like: 19
+  },
+  {
+    _id: ObjectId('6967911077a4275b561e2622'),
+    title: 'vlog',
+    desc: 'vlog description',
+    like: 10
+  },
+  {
+    _id: ObjectId('6967911077a4275b561e2623'),
+    title: 'motivation',
+    desc: 'this is a motivation desc',
+    like: 50
+  },
+  {
+    _id: ObjectId('6967911077a4275b561e2624'),
+    title: 'movie',
+    desc: 'this is a movie ',
+    like: 1000
+  },
+  {
+    _id: ObjectId('696792fb77a4275b561e2625'),
+    title: 'song',
+    desc: 'this is song 2',
+    like: 19
+  },
+  {
+    _id: ObjectId('696798d32f2c41e1db36cb3a'),
+    title: 'story',
+    desc: 'story description'
+  }
+]
+Post> db.Post.updateMany({},{$set:{date:Date()}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 6,
+  modifiedCount: 6,
+  upsertedCount: 0
+}
+Post> db.Post.find()
+[
+  {
+    _id: ObjectId('696790f477a4275b561e2621'),
+    title: 'song',
+    desc: 'this is a song post',
+    like: 19,
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  },
+  {
+    _id: ObjectId('6967911077a4275b561e2622'),
+    title: 'vlog',
+    desc: 'vlog description',
+    like: 10,
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  },
+  {
+    _id: ObjectId('6967911077a4275b561e2623'),
+    title: 'motivation',
+    desc: 'this is a motivation desc',
+    like: 50,
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  },
+  {
+    _id: ObjectId('6967911077a4275b561e2624'),
+    title: 'movie',
+    desc: 'this is a movie ',
+    like: 1000,
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  },
+  {
+    _id: ObjectId('696792fb77a4275b561e2625'),
+    title: 'song',
+    desc: 'this is song 2',
+    like: 19,
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  },
+  {
+    _id: ObjectId('696798d32f2c41e1db36cb3a'),
+    title: 'story',
+    desc: 'story description',
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  }
+]
+Post>
