@@ -1,0 +1,547 @@
+Microsoft Windows [Version 10.0.26200.7462]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\HP>mongosh
+Current Mongosh Log ID: 6968e630dfd04e18d21e2620
+Connecting to:          mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.5.10
+Using MongoDB:          8.2.3
+Using Mongosh:          2.5.10
+
+For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2026-01-14T10:31:52.832+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+------
+
+Warning: Found ~/.mongorc.js, but not ~/.mongoshrc.js. ~/.mongorc.js will not be loaded.
+  You may want to copy or rename ~/.mongorc.js to ~/.mongoshrc.js.
+test> use Post
+switched to db Post
+Post> db.Post.deleteOne({title:"song"})
+{ acknowledged: true, deletedCount: 1 }
+Post> db.Post.find()
+[
+  {
+    _id: ObjectId('6967911077a4275b561e2622'),
+    title: 'vlog',
+    desc: 'vlog description',
+    like: 10,
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  },
+  {
+    _id: ObjectId('6967911077a4275b561e2623'),
+    title: 'motivation',
+    desc: 'this is a motivation desc',
+    like: 50,
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  },
+  {
+    _id: ObjectId('6967911077a4275b561e2624'),
+    title: 'movie',
+    desc: 'this is a movie ',
+    like: 1000,
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  },
+  {
+    _id: ObjectId('696792fb77a4275b561e2625'),
+    title: 'song',
+    desc: 'this is song 2',
+    like: 19,
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  },
+  {
+    _id: ObjectId('696798d32f2c41e1db36cb3a'),
+    title: 'story',
+    desc: 'story description',
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  }
+]
+Post> db.Post.insertMany([{title:'vlog',desc:"this is a vlog desc",like:10},{title:'motivation',desc:"this is a motivation desc",like:50},{title:'saiyaara',Post> db.Post.insertOne({title:"song",desc:"this is a song post",like:40,date:Date()})
+{
+  acknowledged: true,
+  insertedId: ObjectId('6968ea85dfd04e18d21e2621')
+}
+Post> db.Post.find()
+[
+  {
+    _id: ObjectId('6967911077a4275b561e2622'),
+    title: 'vlog',
+    desc: 'vlog description',
+    like: 10,
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  },
+  {
+    _id: ObjectId('6967911077a4275b561e2623'),
+    title: 'motivation',
+    desc: 'this is a motivation desc',
+    like: 50,
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  },
+  {
+    _id: ObjectId('6967911077a4275b561e2624'),
+    title: 'movie',
+    desc: 'this is a movie ',
+    like: 1000,
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  },
+  {
+    _id: ObjectId('696792fb77a4275b561e2625'),
+    title: 'song',
+    desc: 'this is song 2',
+    like: 19,
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  },
+  {
+    _id: ObjectId('696798d32f2c41e1db36cb3a'),
+    title: 'story',
+    desc: 'story description',
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  },
+  {
+    _id: ObjectId('6968ea85dfd04e18d21e2621'),
+    title: 'song',
+    desc: 'this is a song post',
+    like: 40,
+    date: 'Thu Jan 15 2026 18:54:21 GMT+0530 (India Standard Time)'
+  }
+]
+Post> db.Post.updateOne({title:"story"},{$set:{like:37}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+Post> db.Post.find()
+[
+  {
+    _id: ObjectId('6967911077a4275b561e2622'),
+    title: 'vlog',
+    desc: 'vlog description',
+    like: 10,
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  },
+  {
+    _id: ObjectId('6967911077a4275b561e2623'),
+    title: 'motivation',
+    desc: 'this is a motivation desc',
+    like: 50,
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  },
+  {
+    _id: ObjectId('6967911077a4275b561e2624'),
+    title: 'movie',
+    desc: 'this is a movie ',
+    like: 1000,
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  },
+  {
+    _id: ObjectId('696792fb77a4275b561e2625'),
+    title: 'song',
+    desc: 'this is song 2',
+    like: 19,
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  },
+  {
+    _id: ObjectId('696798d32f2c41e1db36cb3a'),
+    title: 'story',
+    desc: 'story description',
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)',
+    like: 37
+  },
+  {
+    _id: ObjectId('6968ea85dfd04e18d21e2621'),
+    title: 'song',
+    desc: 'this is a song post',
+    like: 40,
+    date: 'Thu Jan 15 2026 18:54:21 GMT+0530 (India Standard Time)'
+  }
+]
+Post> db.Post.find().count()
+6
+Post> db.Post.countDocuments()
+6
+Post> db.Post.find().limit(3)
+[
+  {
+    _id: ObjectId('6967911077a4275b561e2622'),
+    title: 'vlog',
+    desc: 'vlog description',
+    like: 10,
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  },
+  {
+    _id: ObjectId('6967911077a4275b561e2623'),
+    title: 'motivation',
+    desc: 'this is a motivation desc',
+    like: 50,
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  },
+  {
+    _id: ObjectId('6967911077a4275b561e2624'),
+    title: 'movie',
+    desc: 'this is a movie ',
+    like: 1000,
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  }
+]
+Post> db.Post.find().skip(3)
+[
+  {
+    _id: ObjectId('696792fb77a4275b561e2625'),
+    title: 'song',
+    desc: 'this is song 2',
+    like: 19,
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  },
+  {
+    _id: ObjectId('696798d32f2c41e1db36cb3a'),
+    title: 'story',
+    desc: 'story description',
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)',
+    like: 37
+  },
+  {
+    _id: ObjectId('6968ea85dfd04e18d21e2621'),
+    title: 'song',
+    desc: 'this is a song post',
+    like: 40,
+    date: 'Thu Jan 15 2026 18:54:21 GMT+0530 (India Standard Time)'
+  }
+]
+Post> db.Post.find().skip(10)
+
+Post> db.Post.find().skip(1)
+[
+  {
+    _id: ObjectId('6967911077a4275b561e2623'),
+    title: 'motivation',
+    desc: 'this is a motivation desc',
+    like: 50,
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  },
+  {
+    _id: ObjectId('6967911077a4275b561e2624'),
+    title: 'movie',
+    desc: 'this is a movie ',
+    like: 1000,
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  },
+  {
+    _id: ObjectId('696792fb77a4275b561e2625'),
+    title: 'song',
+    desc: 'this is song 2',
+    like: 19,
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  },
+  {
+    _id: ObjectId('696798d32f2c41e1db36cb3a'),
+    title: 'story',
+    desc: 'story description',
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)',
+    like: 37
+  },
+  {
+    _id: ObjectId('6968ea85dfd04e18d21e2621'),
+    title: 'song',
+    desc: 'this is a song post',
+    like: 40,
+    date: 'Thu Jan 15 2026 18:54:21 GMT+0530 (India Standard Time)'
+  }
+]
+Post> db.Post.find().sort({like:1})
+[
+  {
+    _id: ObjectId('6967911077a4275b561e2622'),
+    title: 'vlog',
+    desc: 'vlog description',
+    like: 10,
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  },
+  {
+    _id: ObjectId('696792fb77a4275b561e2625'),
+    title: 'song',
+    desc: 'this is song 2',
+    like: 19,
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  },
+  {
+    _id: ObjectId('696798d32f2c41e1db36cb3a'),
+    title: 'story',
+    desc: 'story description',
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)',
+    like: 37
+  },
+  {
+    _id: ObjectId('6968ea85dfd04e18d21e2621'),
+    title: 'song',
+    desc: 'this is a song post',
+    like: 40,
+    date: 'Thu Jan 15 2026 18:54:21 GMT+0530 (India Standard Time)'
+  },
+  {
+    _id: ObjectId('6967911077a4275b561e2623'),
+    title: 'motivation',
+    desc: 'this is a motivation desc',
+    like: 50,
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  },
+  {
+    _id: ObjectId('6967911077a4275b561e2624'),
+    title: 'movie',
+    desc: 'this is a movie ',
+    like: 1000,
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  }
+]
+Post> db.Post.find().sort({like:0})
+MongoInvalidArgumentError: Invalid sort direction: 0
+Post> db.Post.find().sort({like:-1})
+[
+  {
+    _id: ObjectId('6967911077a4275b561e2624'),
+    title: 'movie',
+    desc: 'this is a movie ',
+    like: 1000,
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  },
+  {
+    _id: ObjectId('6967911077a4275b561e2623'),
+    title: 'motivation',
+    desc: 'this is a motivation desc',
+    like: 50,
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  },
+  {
+    _id: ObjectId('6968ea85dfd04e18d21e2621'),
+    title: 'song',
+    desc: 'this is a song post',
+    like: 40,
+    date: 'Thu Jan 15 2026 18:54:21 GMT+0530 (India Standard Time)'
+  },
+  {
+    _id: ObjectId('696798d32f2c41e1db36cb3a'),
+    title: 'story',
+    desc: 'story description',
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)',
+    like: 37
+  },
+  {
+    _id: ObjectId('696792fb77a4275b561e2625'),
+    title: 'song',
+    desc: 'this is song 2',
+    like: 19,
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  },
+  {
+    _id: ObjectId('6967911077a4275b561e2622'),
+    title: 'vlog',
+    desc: 'vlog description',
+    like: 10,
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  }
+]
+Post> db.Post.find().sort({title:1})
+[
+  {
+    _id: ObjectId('6967911077a4275b561e2623'),
+    title: 'motivation',
+    desc: 'this is a motivation desc',
+    like: 50,
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  },
+  {
+    _id: ObjectId('6967911077a4275b561e2624'),
+    title: 'movie',
+    desc: 'this is a movie ',
+    like: 1000,
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  },
+  {
+    _id: ObjectId('696792fb77a4275b561e2625'),
+    title: 'song',
+    desc: 'this is song 2',
+    like: 19,
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  },
+  {
+    _id: ObjectId('6968ea85dfd04e18d21e2621'),
+    title: 'song',
+    desc: 'this is a song post',
+    like: 40,
+    date: 'Thu Jan 15 2026 18:54:21 GMT+0530 (India Standard Time)'
+  },
+  {
+    _id: ObjectId('696798d32f2c41e1db36cb3a'),
+    title: 'story',
+    desc: 'story description',
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)',
+    like: 37
+  },
+  {
+    _id: ObjectId('6967911077a4275b561e2622'),
+    title: 'vlog',
+    desc: 'vlog description',
+    like: 10,
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  }
+]
+Post> db.Post.find({title:"song",like:37})
+
+Post> db.Post.find({title:"song",like:40})
+[
+  {
+    _id: ObjectId('6968ea85dfd04e18d21e2621'),
+    title: 'song',
+    desc: 'this is a song post',
+    like: 40,
+    date: 'Thu Jan 15 2026 18:54:21 GMT+0530 (India Standard Time)'
+  }
+]
+Post> db.Post.find({$and:[{title:"song"},{like:40}]})
+[
+  {
+    _id: ObjectId('6968ea85dfd04e18d21e2621'),
+    title: 'song',
+    desc: 'this is a song post',
+    like: 40,
+    date: 'Thu Jan 15 2026 18:54:21 GMT+0530 (India Standard Time)'
+  }
+]
+Post> db.Post.find({$or:[{title:"song"},{like:40}]})
+[
+  {
+    _id: ObjectId('696792fb77a4275b561e2625'),
+    title: 'song',
+    desc: 'this is song 2',
+    like: 19,
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  },
+  {
+    _id: ObjectId('6968ea85dfd04e18d21e2621'),
+    title: 'song',
+    desc: 'this is a song post',
+    like: 40,
+    date: 'Thu Jan 15 2026 18:54:21 GMT+0530 (India Standard Time)'
+  }
+]
+Post> db.Post.find({title:{$in:["song","motivation"]}})
+[
+  {
+    _id: ObjectId('6967911077a4275b561e2623'),
+    title: 'motivation',
+    desc: 'this is a motivation desc',
+    like: 50,
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  },
+  {
+    _id: ObjectId('696792fb77a4275b561e2625'),
+    title: 'song',
+    desc: 'this is song 2',
+    like: 19,
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  },
+  {
+    _id: ObjectId('6968ea85dfd04e18d21e2621'),
+    title: 'song',
+    desc: 'this is a song post',
+    like: 40,
+    date: 'Thu Jan 15 2026 18:54:21 GMT+0530 (India Standard Time)'
+  }
+]
+Post> db.Post.find({$nor:[{title:"song"},{like:40}]})
+[
+  {
+    _id: ObjectId('6967911077a4275b561e2622'),
+    title: 'vlog',
+    desc: 'vlog description',
+    like: 10,
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  },
+  {
+    _id: ObjectId('6967911077a4275b561e2623'),
+    title: 'motivation',
+    desc: 'this is a motivation desc',
+    like: 50,
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  },
+  {
+    _id: ObjectId('6967911077a4275b561e2624'),
+    title: 'movie',
+    desc: 'this is a movie ',
+    like: 1000,
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  },
+  {
+    _id: ObjectId('696798d32f2c41e1db36cb3a'),
+    title: 'story',
+    desc: 'story description',
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)',
+    like: 37
+  }
+]
+Post> db.Post.find({$nor:[{title:"song"}]})
+[
+  {
+    _id: ObjectId('6967911077a4275b561e2622'),
+    title: 'vlog',
+    desc: 'vlog description',
+    like: 10,
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  },
+  {
+    _id: ObjectId('6967911077a4275b561e2623'),
+    title: 'motivation',
+    desc: 'this is a motivation desc',
+    like: 50,
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  },
+  {
+    _id: ObjectId('6967911077a4275b561e2624'),
+    title: 'movie',
+    desc: 'this is a movie ',
+    like: 1000,
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  },
+  {
+    _id: ObjectId('696798d32f2c41e1db36cb3a'),
+    title: 'story',
+    desc: 'story description',
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)',
+    like: 37
+  }
+]
+Post> db.Post.find({$nor:[{title:"song"},{like:60}]})
+[
+  {
+    _id: ObjectId('6967911077a4275b561e2622'),
+    title: 'vlog',
+    desc: 'vlog description',
+    like: 10,
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  },
+  {
+    _id: ObjectId('6967911077a4275b561e2623'),
+    title: 'motivation',
+    desc: 'this is a motivation desc',
+    like: 50,
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  },
+  {
+    _id: ObjectId('6967911077a4275b561e2624'),
+    title: 'movie',
+    desc: 'this is a movie ',
+    like: 1000,
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)'
+  },
+  {
+    _id: ObjectId('696798d32f2c41e1db36cb3a'),
+    title: 'story',
+    desc: 'story description',
+    date: 'Wed Jan 14 2026 19:15:50 GMT+0530 (India Standard Time)',
+    like: 37
+  }
+]
+Post>

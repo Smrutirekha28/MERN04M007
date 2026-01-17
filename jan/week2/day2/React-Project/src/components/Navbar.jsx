@@ -18,14 +18,12 @@ function Navbar() {
             <p className='text-3xl font-bold text-blue-800 cursor-pointer'
                 onClick={()=>navigate("/")}           
             >Food <span className='text-[#ff6b6b]'>Hotel</span></p>
-            <ul className='w-lg flex justify-between text-xl cursor-pointer '>
-              <li className='hover:text-[#ff6b6b]'>Home</li>
-              <li className='hover:text-[#ff6b6b]'>Menu</li>
-              {/* <li className='hover:text-[#ff6b6b]'>Services</li>
-              <li className='hover:text-[#ff6b6b]'>Contact</li> */}
-              <button className='hover:text[#ff6b6b]' to='/login' onClick={handleAuthUser}>{localStorage.getItem("isLogin") ? "Logout" : "Login"}</button>
-              <NavLink className='hover:text[#ff6b6b]' to="/register">Register</NavLink>
-            </ul>
+            <div className='w-lg flex justify-between text-xl cursor-pointer '>
+              <p className='hover:text-[#ff6b6b] py-2'onClick={()=>navigate("/")}>Home</p>
+              <p className='hover:text-[#ff6b6b] py-2' onClick={()=>navigate("/foods")}>Food</p>
+              <button className='hover:text[#ff6b6b]  bg-[#ff6b6b] text-white md:px-3 md:py-2 text-center shadow rounded-lg ' to='/login' onClick={handleAuthUser}>{localStorage.getItem("isLogin") ? "Logout" : "Login"}</button>
+              <NavLink className='hover:text[#ff6b6b] bg-[#ff6b6b] text-white md:px-3 md:py-2 text-center shadow rounded-lg ' to="/register">Register</NavLink>
+            </div>
             {/* <NavLink to="/foods" className=' bg-red-500 text-white px-6 py-2 shadow rounded-lg'>Foods</NavLink> */}
         </div>
     </div>

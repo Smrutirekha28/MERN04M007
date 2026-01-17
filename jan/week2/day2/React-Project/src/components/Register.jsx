@@ -27,20 +27,30 @@ function Register() {
         }
     }
   return (
-    <div className='mt-20'>
-        <label htmlFor="">Full Name</label>
-        <input type="text" name="" value={name} className='border-2' onChange={(e)=>setName(e.target.value)}/>
-        <br />
-        <label htmlFor="">Email</label>
-        <input type="email" name="" value={email}  className='border-2' onChange={(e)=>setEmail(e.target.value)}/>
-        <br />
-        <label htmlFor="">Phone</label>
-        <input type="number" name="" value={phone} className='border-2' onChange={(e) =>setPhone(e.target.value)}/>
-        <br />
-        <label htmlFor="">Password</label>
-        <input type="password" name="" value={password}  className='border-2' onChange={(e)=>setPassword(e.target.value)}/>
-        <br />
-        <button onClick={handleRegister}>Register</button>
+    <div className='min-h-screen flex items-center justify-center bg-gray-100 px-4'>
+      <div className='w-full max-w-md bg-white p-8 rounded-xl shadow-lg'>
+          <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
+      Create Account
+          </h2>
+        <div>
+          <label htmlFor="" className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+          <input type="text" placeholder="Enter your full name" value={name} className='w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500' onChange={(e)=>setName(e.target.value)}/>
+        </div>
+        <div>  
+          <label htmlFor="" className='block text-sm font-medium text-gray-700 mb-1'>Email</label>
+          <input type="email" placeholder="Enter your email"
+          className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" value={email}   onChange={(e)=>setEmail(e.target.value)}/>
+        </div>
+        <div>  
+          <label htmlFor="" className="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+          <input type="number" placeholder="Enter your phone number" value={phone} className='w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500' onChange={(e) =>setPhone(e.target.value)}/>
+        </div> 
+        <div>
+          <label htmlFor="" className="block text-sm font-medium text-gray-700 mb-1">Password</label>
+          <input type="password"  placeholder="Create a password" value={password}  className='w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500' onChange={(e)=>setPassword(e.target.value)}/>
+        </div>
+          <button onClick={handleRegister} className="w-full bg-[#ff6b6b] text-white py-2 rounded-lg font-semibold mt-5  transition">Register</button>
+      </div>    
     </div>
   )
 }

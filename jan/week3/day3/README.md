@@ -1,6 +1,6 @@
 MONGODB
 ========
-->Database -> Collection(table) -> Document(data)
+->Cluster->Database -> Collection(table) -> Document(data)
 
 Commands
 ============
@@ -25,7 +25,7 @@ Commands
             //it is used to find the 1st data from the collection
 ->To find the specific data from all data
     => db.databasename.find({},{})
-            //the 1st {} is all data and the 2nd {} is projection
+            //the 1st {} is all data(condition) and the 2nd {} is projection
             //Example
                 ->db.Post.findOne({title:"song"})
                     =>it give only title field
@@ -39,6 +39,12 @@ Commands
         => db.Post.updateOne({},{$set:{}})
             //the 1st {} is the existing(old) data and the 2nd {} is the update(new) data which you want to change
             //set is the keyword to update(add) the data without using "set" keyword the update is not done
+
+                            or
+        => db.Post.updateOne({},{$push:{}})
+            //push is the keyword to update(add) the data without using "set" keyword the update is not done
+                   
+
         =>db.Post.updateOne({},{$set:{}},{upsert:true})
             //the 3rd {} is used for if the existing data is present then it update, if not present it insert the data
     ->To update the data(for deleting the data)
@@ -48,3 +54,9 @@ Commands
 ->To update many
     =>db.Post.updateMany({},{$set:{}})
         //used to update multiple documents
+
+
+
+
+        framer motion(animation)
+        

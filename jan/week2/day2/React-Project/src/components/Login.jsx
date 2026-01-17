@@ -29,18 +29,20 @@ function Login() {
       
   }
   return (
-    <div className='w-full h-screen  bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50 flex justify-center items-center'>
-    <div className='border-2  w-100 bg-blur h-1/2'>
-      <p className='flex items-center justify-center text-3xl'>Login</p>
+    <div className='min-h-screen flex items-center justify-center  bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50'>
+    <div className='w-full max-w-md bg-white p-8 rounded-xl shadow-lg'>
+      <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">
+      Login
+    </h2>
         <div>
-          <label htmlFor="">Email</label>
-          <input type="email" name="" id="" value={email} className='border-2 ' onChange={(e) => setEmail(e.target.value)}/>
+          <label htmlFor="" className='block text-sm font-medium text-gray-700 mb-1'>Email</label>
+          <input type="email" placeholder="Enter your email" id="" value={email} className='w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500' onChange={(e) => setEmail(e.target.value)}/>
         </div>
         <div>
-          <label htmlFor="">Password</label>
-          <input type="password" name="" id="" value={password} className='border-2' onChange={(e)=> setPassword(e.target.value)} />
+          <label htmlFor="" className='block text-sm font-medium text-gray-700 mb-1'>Password</label>
+          <input type="password" placeholder="Enter your password"  value={password} className='w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500' onChange={(e)=> setPassword(e.target.value)} />
         </div>
-        <button type='submit' onClick={handleLogin}>Submit</button>
+        <button type='submit' className='w-full bg-[#ff6b6b] text-white py-2 mt-5  rounded-lg font-semibold transition' onClick={handleLogin}>Submit</button>
       </div>
     </div>
   )
