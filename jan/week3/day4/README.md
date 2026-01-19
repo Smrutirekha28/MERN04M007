@@ -1,7 +1,7 @@
 ->Delete the database
     =>drop databasename
 ->Delete the collection
-    =>db.databasename.drop()
+    =>db.collectionname.drop()
 ->Delete the documents
     Delete One
     =>db.Post.deleteOne()

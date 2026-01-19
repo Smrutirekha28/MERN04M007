@@ -9,7 +9,7 @@ Commands
 ->Switch a database
     =>use databasename
 ->Create a collection(table)
-    =>db.createCollection("databasename")
+    =>db.createCollection("collectionname")
 ->Insert data in the collection(table)
     => db.Post.insertOne({title:"song",desc:"this is song 2"}) 
             //it is used to insert only ne data
@@ -17,18 +17,18 @@ Commands
             // it is used to insert more than one data
 
 ->To fetch the data from the collection
-    => db.databasename.find()
+    => db.collectionname.find()
             or
-    => db.databasename.find({})
+    => db.collectionname.find({})
 ->To fetch the first data from the collection 
-    =>   db.databasename.findOne({title:"song"})
+    =>   db.collectionname.findOne({title:"song"})
             //it is used to find the 1st data from the collection
 ->To find the specific data from all data
-    => db.databasename.find({},{})
+    => db.collectionname.find({},{})
             //the 1st {} is all data(condition) and the 2nd {} is projection
             //Example
                 ->db.Post.findOne({title:"song"})
-                    =>it give only title field
+                    =>it give the all fields where title:"song" field is present
                 -> db.Post.find({},{title:0})
                     =>it give all fields except title field
 

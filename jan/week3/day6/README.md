@@ -29,8 +29,9 @@ equals to(=)
     =>Ex: db.Post.find({like:{$eq:30}})
 
 
-not operator
+not  operator(not equals to)
 ============
+->it is for single value checking
 ->db.Post.find({like:{$not:{$eq:37}}})
              or
 ->"ne" keyword is used to check less than 
@@ -38,6 +39,7 @@ not operator
 
 not in operator
 ================
+->same as not equals to but it is for multiple value checking
 ->it is used for multiple value checking
     =>db.Post.find({like:{$nin:[19,37]}})
 
@@ -82,3 +84,73 @@ Questions
 
 ->Add a field verify:true where isActive field is present
     =>Ans: db.Post.updateMany({isActive:{$exists:true}},{$set:{verify:true}})
+
+
+
+
+
+
+
+
+=======================================    All Commands    ===========================================================
+
+
+
+
+All the MONGODB commands
+==========================
+
+Create
+===========
+use database
+db.createCollection("collectionname")
+
+Insert
+==========
+db.collection.insertOne()
+db.collection.insertMany()
+
+Retrieve(fetch)
+===============
+db.collection.find()
+db.collection.findOne()
+db.collection.find({},{})
+db.collection.find().count()  or db.collection.countDocuments()
+db.collection.find().limit()
+db.collection.find().skip()
+db.collection.find().sort()
+db.collection.find({$and:[{key:value}]})
+db.collection.find({$or:[{key:value}]})
+db.collection.find({keyname:{$in:[valuename]}})
+db.collection.find({$nor:[{key:value}]})
+db.collection.find({key:{$gt:value}})
+db.collection.find({key:{$lt:value}})
+db.collection.find({key:{$gte:value}})
+db.collection.find({key:{$lte:value}})
+db.collection.find({key:{$eq:value}})
+db.collection.find({key:{$ne:value}}) or  db.collection.find({key:{$not:{$eq:value}}})
+db.collection.find({key:{$nin:[values]}})
+db.collection.distinct(keyname)
+db.collection.find({keyname:{$exists:true}})
+
+
+Update
+=========
+db.collection.updateOne({},{$set:{}})
+db.collection.updateMany({},{$set:{}})
+db.collection.updateOne({},{$unset:{}})
+db.collection.updateMany({},{$unset:{}})
+db.collection.updateOne({},{$set:{}},{upsert:true})
+db.collection.updateMany({},{$set:{}},{upsert:true})
+db.collection.updateMany({},{$rename:{existkey:newkey}})
+db.collection.updateMany({},{$inc:{key:value}})
+db.collection.updateMany({},{$inc:{key: -value}})
+db.collection.updateMany({},{$set:{key:{key:value}}})
+
+Delete
+========
+drop database
+db.collection.drop()
+db.collection.deleteOne()
+db.collection.deleteMany()
+
