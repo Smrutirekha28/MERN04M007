@@ -5,7 +5,7 @@
 
 //"dev" : "nodemon index.js" (it is used for when anyone do npm run dev the nodemon index.js is automatic starting) 
 
-//to store the port number secretly we have to use .env file
+//to store the port number or any data secretly in the form of key and value we have to use .env file and it is a environmental file 
 
 //index.js is the server page in express
 const express = require("express"); //It is used to import the express inside the current file
@@ -20,3 +20,6 @@ app.listen(port,()=>{ //handler //listen () is used to run the server
 }) //the 1st parameter(8000) is the port number and the 2nd one is the handler
 //if the handler start executing,so we can know that the application is starting
 
+//steps
+//npm init -y
+//npm i express dotenv nodemon
