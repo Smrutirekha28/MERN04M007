@@ -23,3 +23,5 @@ app.listen(port,()=>{ //handler //listen () is used to run the server
 //steps
 //npm init -y
 //npm i express dotenv nodemon
+//for database
+    //npm i mongoose
